@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Apple Event Bingo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .main {
+        margin: 0 30vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .table {
+        table-layout: fixed;
+      }
+
+      td {
+        cursor: pointer;
+        text-align: center;
+      }
+
+      td.clicked {
+        background: rgb(240, 146, 57);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="apple.png" />
+      <br />
+      <h2>Luke &amp; Noah&apos;s</h2>
+      <h1>Apple Event Bingo</h1>
+      <br />
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td>Fastest iPhone ever</td>
+            <td>128 GB base storage for the Pro</td>
+            <td>HomePod mini before iPhone 12</td>
+            <td>iPad Air release date</td>
+          </tr>
+          <tr>
+            <td>iPhone 12 mini</td>
+            <td>MagSafe</td>
+            <td>iPhone 12</td>
+            <td>Midnight Blue and (PRODUCT)RED</td>
+          </tr>
+          <tr>
+            <td>Apple TV</td>
+            <td>HomePod mini</td>
+            <td>LiDAR</td>
+            <td>iPhone 12 Pro Max</td>
+          </tr>
+          <tr>
+            <td>Ultrawideband</td>
+            <td>iPhone 12 Pro</td>
+            <td>mmWave</td>
+            <td>No power brick nor EarPods</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("td").click(function () {
+          console.log(this);
+          $(this).toggleClass("clicked");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bingo</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        .main {
+            margin: 0 33vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .table {
+            table-layout: fixed;
+        }
+
+        td {
+            cursor: pointer;
+            text-align: center;
+        }
+
+        td.clicked {
+            background: rgb(134, 182, 229);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <img src="apple.png">
+    <br/>
+    <h2>Luke &amp; Noah&apos;s</h2>
+    <h1>Apple Event Bingo</h1>
+    <br/>
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <td>Good morning!</td>
+            <td>iPad Air available today</td>
+            <td>Under 1 hour 30 minutes</td>
+            <td>Liquid Retina display</td>
+        </tr>
+        <tr>
+            <td>Intro: California wildfires + Back to school</td>
+            <td>AirTags</td>
+            <td>Apple Watch Pro</td>
+            <td>Fitness+</td>
+        </tr>
+        <tr>
+            <td>Blood oxygen sensor</td>
+            <td>Craig running</td>
+            <td>A14</td>
+            <td>We think you're going to love it</td>
+        </tr>
+        <tr>
+            <td>Apple One</td>
+            <td>Apple Card launching in more countries</td>
+            <td>Apple Watch SE</td>
+            <td>100% recycled aluminum</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('td').click(function() {
+            console.log(this);
+            $(this).toggleClass('clicked');
+        });
+    });
+</script>
+</body>
+</html>
