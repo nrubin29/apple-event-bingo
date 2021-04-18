@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Apple Event Bingo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .main {
+        margin: 0 30vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .table {
+        table-layout: fixed;
+      }
+
+      .table td {
+        cursor: pointer;
+        text-align: center;
+        vertical-align: middle;
+        height: 8em;
+      }
+
+      td.clicked {
+        background: rgb(240, 146, 57);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="apple.png" />
+      <br />
+      <h2>
+        <a
+          href="https://www.youtube.com/channel/UC3c8H4Tlnm5M6pXsVMGnmNg"
+          target="_blank"
+          >Luke</a
+        >
+        &amp;
+        <a href="https://www.youtube.com/user/PogoStick29Dev" target="_blank">
+          Noah</a
+        >&rsquo;s
+      </h2>
+      <h1>Apple Event Bingo</h1>
+      <h4>April 2021</h4>
+      <br />
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+          </tr>
+          <tr>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+          </tr>
+          <tr>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+          </tr>
+          <tr>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+            <td>&dash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("td").click(function () {
+          console.log(this);
+          $(this).toggleClass("clicked");
+        });
+      });
+    </script>
+  </body>
+</html>
