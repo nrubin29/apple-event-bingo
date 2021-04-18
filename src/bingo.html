@@ -49,39 +49,53 @@
       <br />
       <table class="table table-bordered">
         <tbody>
-          <tr>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
+          <tr data-row="0">
+            <td data-col="0">&dash;</td>
+            <td data-col="1">&dash;</td>
+            <td data-col="2">&dash;</td>
+            <td data-col="3">&dash;</td>
           </tr>
-          <tr>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
+          <tr data-row="1">
+            <td data-col="0">&dash;</td>
+            <td data-col="1">&dash;</td>
+            <td data-col="2">&dash;</td>
+            <td data-col="3">&dash;</td>
           </tr>
-          <tr>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
+          <tr data-row="2">
+            <td data-col="0">&dash;</td>
+            <td data-col="1">&dash;</td>
+            <td data-col="2">&dash;</td>
+            <td data-col="3">&dash;</td>
           </tr>
-          <tr>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
-            <td>&dash;</td>
+          <tr data-row="3">
+            <td data-col="0">&dash;</td>
+            <td data-col="1">&dash;</td>
+            <td data-col="2">&dash;</td>
+            <td data-col="3">&dash;</td>
           </tr>
         </tbody>
       </table>
+      <a href="edit.html" id="save" class="btn btn-primary">Edit</a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
+        var boardJson = localStorage.getItem("board");
+
+        if (boardJson != null) {
+          var board = JSON.parse(boardJson);
+
+          for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+              $("tr[data-row=" + i + "]")
+                .children("td[data-col=" + j + "]")
+                .html(board[i][j]);
+            }
+          }
+        }
+
         $("td").click(function () {
-          console.log(this);
           $(this).toggleClass("clicked");
         });
       });
