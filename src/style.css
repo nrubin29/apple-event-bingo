@@ -1,0 +1,24 @@
+.main {
+  margin: 0 1em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 641px) {
+  .main {
+    margin: 0 15vw;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .main {
+    margin: 0 30vw;
+  }
+}
+
+.table {
+  table-layout: fixed;
+}
