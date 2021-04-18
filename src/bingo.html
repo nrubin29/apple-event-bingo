@@ -18,35 +18,42 @@
     <style>
       .table td {
         cursor: pointer;
-        text-align: center;
-        vertical-align: middle;
-        height: 8em;
       }
 
       td.clicked {
         background: rgb(240, 146, 57);
         color: white;
       }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        width: calc(130px + 1em);
+      }
+
+      .twitter-share-button {
+        margin-right: 1em;
+      }
     </style>
   </head>
   <body>
     <div class="main">
-      <img src="apple.png" />
-      <br />
-      <h2>
-        <a
-          href="https://www.youtube.com/channel/UC3c8H4Tlnm5M6pXsVMGnmNg"
-          target="_blank"
-          >Luke</a
-        >
-        &amp;
-        <a href="https://www.youtube.com/user/PogoStick29Dev" target="_blank">
-          Noah</a
-        >&rsquo;s
-      </h2>
-      <h1>Apple Event Bingo</h1>
-      <h4>April 2021</h4>
-      <br />
+      <div class="title">
+        <img src="apple.png" />
+        <h2>
+          <a
+            href="https://www.youtube.com/channel/UC3c8H4Tlnm5M6pXsVMGnmNg"
+            target="_blank"
+            >Luke</a
+          >
+          &amp;
+          <a href="https://www.youtube.com/user/PogoStick29Dev" target="_blank">
+            Noah</a
+          >&rsquo;s
+        </h2>
+        <h1>Apple Event Bingo</h1>
+        <h4>April 2021</h4>
+      </div>
       <table class="table table-bordered">
         <tbody>
           <tr data-row="0">
@@ -75,13 +82,41 @@
           </tr>
         </tbody>
       </table>
-      <a href="edit.html" id="save" class="btn btn-primary">Edit</a>
+      <div class="buttons">
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          class="twitter-share-button"
+          data-size="large"
+          data-text="My #AppleEventBingo board is ready for Tuesday&#39;s #AppleEvent!"
+          data-related="nrubin29,LukeMiani"
+          data-dnt="true"
+          data-show-count="false"
+        >
+          Tweet
+        </a>
+        <a href="edit.html" id="save" class="btn btn-primary">Edit</a>
+      </div>
     </div>
 
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        var boardJson = localStorage.getItem("board");
+        var boardJson;
+        var hasParam = false;
+
+        var params = new URLSearchParams(window.location.search);
+
+        if (params.has("board")) {
+          boardJson = atob(params.get("board"));
+          hasParam = true;
+        } else {
+          boardJson = localStorage.getItem("board");
+        }
 
         if (boardJson != null) {
           var board = JSON.parse(boardJson);
@@ -94,6 +129,11 @@
             }
           }
         }
+
+        $(".twitter-share-button").attr(
+          "data-url",
+          hasParam ? location.href : location.href + "?board=" + btoa(boardJson)
+        );
 
         $("td").click(function () {
           $(this).toggleClass("clicked");
