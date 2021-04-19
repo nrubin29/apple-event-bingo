@@ -71,6 +71,13 @@
                 data-col="3"
               ></textarea>
             </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="0"
+                data-col="4"
+              ></textarea>
+            </td>
           </tr>
           <tr>
             <td>
@@ -101,6 +108,13 @@
                 data-col="3"
               ></textarea>
             </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="1"
+                data-col="4"
+              ></textarea>
+            </td>
           </tr>
           <tr>
             <td>
@@ -131,6 +145,13 @@
                 data-col="3"
               ></textarea>
             </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="2"
+                data-col="4"
+              ></textarea>
+            </td>
           </tr>
           <tr>
             <td>
@@ -159,6 +180,50 @@
                 class="form-control"
                 data-row="3"
                 data-col="3"
+              ></textarea>
+            </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="3"
+                data-col="4"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="4"
+                data-col="0"
+              ></textarea>
+            </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="4"
+                data-col="1"
+              ></textarea>
+            </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="4"
+                data-col="2"
+              ></textarea>
+            </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="4"
+                data-col="3"
+              ></textarea>
+            </td>
+            <td>
+              <textarea
+                class="form-control"
+                data-row="4"
+                data-col="4"
               ></textarea>
             </td>
           </tr>
@@ -175,8 +240,8 @@
         if (boardJson != null) {
           var board = JSON.parse(boardJson);
 
-          for (var i = 0; i < 4; i++) {
-            for (var j = 0; j < 4; j++) {
+          for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
               $("textarea[data-row=" + i + "][data-col=" + j + "]").val(
                 board[i][j]
               );
@@ -185,8 +250,8 @@
         }
 
         $("#save").click(function () {
-          var board = new Array(4).fill(null).map(function () {
-            return new Array(4).fill("&dash;");
+          var board = new Array(5).fill(null).map(function () {
+            return new Array(5).fill("&dash;");
           });
 
           $("textarea").each(function () {

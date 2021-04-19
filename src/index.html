@@ -63,24 +63,35 @@
             <td data-col="1">&dash;</td>
             <td data-col="2">&dash;</td>
             <td data-col="3">&dash;</td>
+            <td data-col="4">&dash;</td>
           </tr>
           <tr data-row="1">
             <td data-col="0">&dash;</td>
             <td data-col="1">&dash;</td>
             <td data-col="2">&dash;</td>
             <td data-col="3">&dash;</td>
+            <td data-col="4">&dash;</td>
           </tr>
           <tr data-row="2">
             <td data-col="0">&dash;</td>
             <td data-col="1">&dash;</td>
             <td data-col="2">&dash;</td>
             <td data-col="3">&dash;</td>
+            <td data-col="4">&dash;</td>
           </tr>
           <tr data-row="3">
             <td data-col="0">&dash;</td>
             <td data-col="1">&dash;</td>
             <td data-col="2">&dash;</td>
             <td data-col="3">&dash;</td>
+            <td data-col="4">&dash;</td>
+          </tr>
+          <tr data-row="4">
+            <td data-col="0">&dash;</td>
+            <td data-col="1">&dash;</td>
+            <td data-col="2">&dash;</td>
+            <td data-col="3">&dash;</td>
+            <td data-col="4">&dash;</td>
           </tr>
         </tbody>
       </table>
@@ -123,8 +134,8 @@
         if (boardJson != null) {
           var board = JSON.parse(boardJson);
 
-          for (var i = 0; i < 4; i++) {
-            for (var j = 0; j < 4; j++) {
+          for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
               $("tr[data-row=" + i + "]")
                 .children("td[data-col=" + j + "]")
                 .html(board[i][j]);
