@@ -36,7 +36,15 @@ body {
   align-items: center;
 }
 
+.table td {
+  font-size: 10px;
+}
+
 @media screen and (min-width: 641px) {
+  .table td {
+    font-size: initial;
+  }
+
   .main {
     margin: 0 15vw;
   }
