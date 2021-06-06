@@ -1,11 +1,11 @@
 body {
-  background: url("bg.jpg");
+  background: url("bg.jpg") center;
   background-size: cover;
 }
 
 .banner {
   background: rgba(255, 255, 255, 0.5);
-  color: black;
+  color: white;
   padding: 1em;
   font-weight: bold;
   text-align: center;
@@ -14,7 +14,7 @@ body {
 .title {
   text-align: center;
   margin: 1em 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   padding: 1em;
   border-radius: 10px;
 }
