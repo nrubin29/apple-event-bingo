@@ -1,0 +1,76 @@
+body {
+  background: url("bg.jpg") center;
+  background-size: cover;
+}
+
+.banner {
+  background: rgba(255, 255, 255, 0.5);
+  color: white;
+  padding: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  margin: 1em 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.title img {
+  margin-bottom: 1em;
+}
+
+.title a {
+  color: white;
+  text-decoration: underline;
+}
+
+.main {
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table td {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 641px) {
+  .table td {
+    font-size: initial;
+  }
+
+  .main {
+    margin: 0 15vw;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .main {
+    margin: 0 30vw;
+  }
+}
+
+h1,
+h2,
+h4 {
+  color: white;
+  font-weight: bold;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+.table td {
+  text-align: center;
+  word-wrap: break-word;
+  vertical-align: middle;
+  height: 8em;
+  background: rgba(245, 245, 248, 0.93);
+}
