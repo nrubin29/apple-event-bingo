@@ -1,0 +1,32 @@
+{
+  "events": {
+    "september2022": {
+      "title": "Apple Event Bingo",
+      "date": "September 7th, 2022",
+      "accentColor": "rgb(68, 145, 247)",
+      "hashtag": "the #AppleEvent",
+      "backgroundFile": "bg.png"
+    },
+    "june2021": {
+      "title": "WWDC Bingo",
+      "date": "June 2021",
+      "accentColor": "rgb(68, 145, 247)",
+      "hashtag": "#WWDC21",
+      "backgroundFile": "bg.jpg"
+    },
+    "june2022": {
+      "title": "WWDC 2022 Bingo",
+      "date": "June 6, 2022",
+      "accentColor": "rgb(68, 153, 239)",
+      "hashtag": "the #AppleEvent",
+      "backgroundFile": "bg.jpg"
+    },
+    "march2022": {
+      "title": "Apple Event Bingo",
+      "date": "March 2022",
+      "accentColor": "rgb(239, 143, 45)",
+      "hashtag": "the #AppleEvent",
+      "backgroundFile": "bg.jpg"
+    }
+  }
+}

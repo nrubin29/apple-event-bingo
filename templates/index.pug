@@ -1,0 +1,38 @@
+extend base
+
+block head
+    style.
+        .table td {
+            cursor: pointer;
+        }
+
+        td.clicked {
+            /*noinspection CssInvalidPropertyValue*/
+            background: #{accentColor};
+            color: white;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            width: calc(130px + 1em);
+            margin-bottom: 1em;
+        }
+
+        .twitter-share-button {
+            margin-right: 1em;
+        }
+
+block buttons
+    .buttons
+        a(href='https://twitter.com/share?ref_src=twsrc%5Etfw'
+            class='twitter-share-button'
+            data-size='large'
+            data-text='My #AppleEventBingo board is ready for the #AppleEvent!'
+            data-related="nrubin29,LukeMiani"
+            data-dnt='true'
+            data-show-count='false') Tweet
+        a(href='edit.html' class='btn btn-sm btn-primary' data-action='edit') Edit
+
+block cellContent
+    | –

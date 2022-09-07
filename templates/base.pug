@@ -1,0 +1,53 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        title #{title}
+
+        link(rel='stylesheet'
+            href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
+            integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
+            crossorigin='anonymous')
+        link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel="stylesheet")
+        link(rel='stylesheet', href='style.css')
+
+        style.
+            body {
+                background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("#{backgroundFile}") center;
+            }
+
+        block head
+    body
+        a(href='https://www.youtube.com/channel/UC3c8H4Tlnm5M6pXsVMGnmNg' target='_blank')
+            .banner Check out our coverage of the event on YouTube!
+        .main
+            .title
+                img(src='hashflag.png')
+                h2
+                    a(href="https://www.youtube.com/channel/UC3c8H4Tlnm5M6pXsVMGnmNg"
+                        target="_blank") Luke
+                    |  &
+                    |
+                    a(href="https://twitter.com/nrubin29" target="_blank") Noah
+                    | ’s
+                h1 #{title}
+                h4 #{date}
+            block buttons
+            table.table.table-bordered
+                tbody
+                    - let row = 0
+                    - let col = 0
+                    while row < 5
+                        tr(data-row=row)
+                            while col < 5
+                                td(data-col=col)
+                                    block cellContent
+                                - col++
+                        - row++
+                        - col = 0
+        script(src='https://platform.twitter.com/widgets.js'
+            async
+            charset="utf-8")
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='script.js')
