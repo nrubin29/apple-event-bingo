@@ -27,6 +27,13 @@
       "accentColor": "rgb(239, 143, 45)",
       "hashtag": "the #AppleEvent",
       "backgroundFile": "bg.jpg"
+    },
+    "june2023": {
+      "title": "WWDC 2023 Bingo",
+      "date": "June 5, 2023",
+      "accentColor": "rgb(126, 38, 207)",
+      "hashtag": "#WWDC23",
+      "backgroundFile": "bg.jpg"
     }
   }
 }

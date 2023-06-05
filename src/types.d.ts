@@ -12,7 +12,7 @@ type Month =
     | 'november'
     | 'december';
 
-type Year = 2020 | 2021 | 2022;
+type Year = 2020 | 2021 | 2022 | 2023;
 
 type EventId = `${Month}${Year}`;
 
