@@ -1,6 +1,4 @@
 $(function () {
-    const isIndex = $('.btn[data-action="edit"]').length > 0;
-
     let boardJson: string | null;
     let hasParam = false;
 
@@ -14,14 +12,19 @@ $(function () {
         boardJson = localStorage.getItem('board');
     }
 
-    if (boardJson != null && isIndex) {
+    if (boardJson != null) {
         const board = JSON.parse(boardJson);
 
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
-                $(`tr[data-row=${i}]`)
-                    .children(`td[data-col=${j}]`)
-                    .text(board[i][j]);
+                const element = $(`tr[data-row=${i}]`)
+                    .children(`td[data-col=${j}]`).children().first();
+
+                if (element.prop('tagName') == 'textarea') {
+                    element.val(board[i][j]);
+                } else {
+                    element.text(board[i][j]);
+                }
             }
         }
     }
