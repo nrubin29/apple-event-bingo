@@ -1,5 +1,5 @@
 body {
-  background-color: #373737;
+  background-color: rgb(36, 44, 60);
   background-size: cover;
 }
 
@@ -9,6 +9,7 @@ body {
   padding: 1em;
   font-weight: bold;
   text-align: center;
+  text-decoration: underline;
 }
 
 .title {
@@ -81,4 +82,8 @@ h4 {
   vertical-align: middle;
   height: 8em;
   background: rgba(245, 245, 248, 0.93);
+}
+
+.table td p {
+  margin: 0;
 }
