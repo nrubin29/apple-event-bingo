@@ -21,7 +21,10 @@ for (const template of ['index', 'edit']) {
 }
 
 // Copy static files
-await fs.copyFile(`images/${eventId}/${event.backgroundFile}`, `dist/${event.backgroundFile}`);
+if (event.backgroundFile) {
+    await fs.copyFile(`images/${eventId}/${event.backgroundFile}`, `dist/${event.backgroundFile}`);
+}
+
 await fs.copyFile(`images/${eventId}/hashflag.png`, 'dist/hashflag.png');
 await fs.copyFile('assets/style.css', `dist/style.css`);
 await fs.copyFile('assets/script.js', `dist/script.js`);

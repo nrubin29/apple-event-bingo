@@ -12,10 +12,11 @@ html(lang='en')
         link(href='https://fonts.googleapis.com/css2?family=Roboto&display=swap' rel="stylesheet")
         link(rel='stylesheet', href='style.css')
 
-        style.
-            body {
-                background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("#{backgroundFile}") center;
-            }
+        if backgroundFile
+            style.
+                body {
+                    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("#{backgroundFile}") center;
+                }
 
         block head
     body

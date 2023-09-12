@@ -25,5 +25,5 @@ interface AppleEvent {
     date: string;
     accentColor: string;
     hashtag: string;
-    backgroundFile: string;
+    backgroundFile?: string;
 }
