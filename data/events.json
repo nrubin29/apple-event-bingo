@@ -34,6 +34,12 @@
       "accentColor": "rgb(126, 38, 207)",
       "hashtag": "#WWDC23",
       "backgroundFile": "bg.jpg"
+    },
+    "september2023": {
+      "title": "Apple Event Bingo",
+      "date": "September 12, 2023",
+      "accentColor": "rgb(43, 94, 152)",
+      "hashtag": "the #AppleEvent"
     }
   }
 }
