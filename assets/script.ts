@@ -53,4 +53,14 @@ $(function () {
         localStorage.setItem('board', JSON.stringify(board));
         location.href = '/bingo';
     });
+
+    $('.btn[data-action="reset"]').on('click', function () {
+        if (!confirm('Are you sure?')) {
+            return;
+        }
+
+        $('textarea').each(function () {
+            (this as HTMLTextAreaElement).value = '';
+        });
+    });
 });

@@ -63,6 +63,14 @@ h4 {
   font-weight: bold;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: calc(130px + 1em);
+  margin-bottom: 1em;
+}
+
 .table {
   table-layout: fixed;
 }
